@@ -51,7 +51,7 @@ namespace dottnet
             x_max += 10;
             y_max += 10;
 
-            for (int i = 0; i < num; i++) // 최소값으로 사각형 좌표 최적화
+            for (int i = 0; i < num; i++) //최소값으로 사각형 좌표 최적화
             {
                 x[i] -= x_min;
                 y[i] -= y_min;
@@ -67,7 +67,7 @@ namespace dottnet
             {
                 for (y_cnt = y[i]; y_cnt < y[i] + 10; y_cnt++)
                 {
-                    for (x_cnt = x[i]; x_cnt < x[i] + 10; x_cnt++) // 각 좌표 있는 사각형 로그 기록
+                    for (x_cnt = x[i]; x_cnt < x[i] + 10; x_cnt++) //각 좌표 있는 사각형 로그 기록
                     {
                         all[y_cnt, x_cnt] += 1;
                     }
@@ -76,18 +76,18 @@ namespace dottnet
 
             // 실제 넓이 구하기
 
-            for (y_cnt = 0; y_cnt < y_max; y_cnt++) //모든 좌표만큼 반복
+            for (y_cnt = 0; y_cnt < y_max; y_cnt++)
             {
                 for (x_cnt = 0; x_cnt < x_max; x_cnt++)
                 {
-                    if(all[y_cnt, x_cnt] != 0) //판독
+                    if(all[y_cnt, x_cnt] != 0) //모든 좌표만큼 반복 판독
                     {
                         max++;
                     }
                 }
             }
 
-            Console.WriteLine(max);
+            Console.WriteLine(max); //판독 결과 출력
         }
     }
 }
