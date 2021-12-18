@@ -6,24 +6,24 @@ namespace dottnet
     {
         static void Main(string[] args)
         {
-        //https://www.acmicpc.net/problem/2563
-        
-            // 사각형의 x,y 좌표
-            int[] x = new int[100];
-            int[] y = new int[100];
+            //https://www.acmicpc.net/problem/2563
 
+            //총 사각형의 갯수
+            int num = int.Parse(Console.ReadLine());
+
+            // 총 사각형의 x,y 좌표
+            int[] x = new int[num];
+            int[] y = new int[num];
+            
             // x 축 y 축 그래프
             int[,] all;
-
+            
             // 총 영역의 넓이
             int max = 0;
 
             // 최적화에 필요한 변수
             int x_max = 0, y_max = 0, x_min = 100, y_min = 100;
-
-
-
-            int num = int.Parse(Console.ReadLine());
+            
 
             // x , y 값 저장
 
