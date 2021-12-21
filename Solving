@@ -1,93 +1,15 @@
 using System;
 
-namespace dottnet
+namespace test1
 {
-    class Program
+    class MainApp
     {
         static void Main(string[] args)
         {
-            //https://www.acmicpc.net/problem/2563
+            string[] String1 = Console.ReadLine().Split(
+                new string[] {" "},StringSplitOptions.None);
 
-            //총 사각형의 갯수
-            int num = int.Parse(Console.ReadLine());
-
-            // 총 사각형의 x,y 좌표
-            int[] x = new int[num];
-            int[] y = new int[num];
-            
-            // x 축 y 축 그래프
-            int[,] all;
-            
-            // 최적화에 필요한 변수
-            int x_max = 0, y_max = 0, x_min = 100, y_min = 100;
-            
-            // 총 영역의 넓이
-            int max = 0;
-
-            
-            // x , y 값 저장
-
-            for (int i = 0; i < num; i++)
-            {
-                string[] arr = Console.ReadLine().Split(' ');
-
-                x[i] = int.Parse(arr[0]);
-                y[i] = int.Parse(arr[1]);
-            }
-
-
-            // 시간 복잡도를 위해 총 반복 횟수를 줄여주는 최적화 과정 ++ (사각형의 범위가 넓을 수록 유리)
-
-            for (int i = 0; i < num; i++)
-            {
-                if (x_max < x[i]) x_max = x[i];
-
-                if (y_max < y[i]) y_max = y[i];
-
-                if (x_min > x[i]) x_min = x[i];
-
-                if (y_min > y[i]) y_min = y[i];
-            }
-            x_max += 10;
-            y_max += 10;
-
-            for (int i = 0; i < num; i++) //최소값으로 사각형 좌표 최적화
-            {
-                x[i] -= x_min;
-                y[i] -= y_min;
-            }
-            x_max -= x_min;
-            y_max -= y_min;
-
-            all = new int[y_max, x_max]; //그래프의 최대 범위 정의
-
-            int y_cnt, x_cnt;
-
-            for (int i = 0; i < num; i++)
-            {
-                for (y_cnt = y[i]; y_cnt < y[i] + 10; y_cnt++)
-                {
-                    for (x_cnt = x[i]; x_cnt < x[i] + 10; x_cnt++) //각 좌표 있는 사각형 로그 기록
-                    {
-                        all[y_cnt, x_cnt] += 1;
-                    }
-                }
-            }
-
-            // 실제 넓이 구하기
-
-            for (y_cnt = 0; y_cnt < y_max; y_cnt++)
-            {
-                for (x_cnt = 0; x_cnt < x_max; x_cnt++)
-                {
-                    if(all[y_cnt, x_cnt] != 0) //모든 좌표만큼 반복 판독
-                    {
-                        max++;
-                    }
-                }
-            }
-
-            Console.WriteLine(max); //판독 결과 출력
+            Console.WriteLine(int.Parse(String1[0]) + int.Parse(String1[1]));
         }
     }
 }
