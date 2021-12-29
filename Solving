@@ -1,15 +1,10 @@
-using System;
+#include <iostream>
+using namespace std;
 
-namespace test1
-{
-    class MainApp
-    {
-        static void Main(string[] args)
-        {
-            string[] String1 = Console.ReadLine().Split(
-                new string[] {" "},StringSplitOptions.None);
+int main() {
 
-            Console.WriteLine(int.Parse(String1[0]) + int.Parse(String1[1]));
-        }
-    }
+    int a, b;
+    cin >> a >> b;
+    cout << a - b;
+    return 0;
 }
