@@ -6,7 +6,10 @@ namespace test1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string[] String1 = Console.ReadLine().Split(
+                new string[] {" "},StringSplitOptions.None);
+
+            Console.WriteLine(int.Parse(String1[0]) + int.Parse(String1[1]));
         }
     }
 }
