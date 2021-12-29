@@ -1,10 +1,12 @@
-#include <iostream>
-using namespace std;
+using System;
 
-int main() {
-
-    int a, b;
-    cin >> a >> b;
-    cout << a - b;
-    return 0;
+namespace test1
+{
+    class MainApp
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("강한친구 대한육군\n강한친구 대한육군");
+        }
+    }
 }
