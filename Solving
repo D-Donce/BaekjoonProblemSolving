@@ -3,16 +3,9 @@ using namespace std;
 
 int main()
 {
-    int a = 0, b, i;
 
-    cin >> b;
-
-    for (i = 1; i < b+1; i++)
-    {
-        a = a + i;
-    }
-
-    cout << a << endl;
-
-    return 0;
+	char a;
+	cin >> a;
+	cout << (int)a;
+	return 0;
 }
