@@ -1,6 +1,12 @@
-A = int(input())
-B = int(input())
+using System;
 
-print(A+B)
-print(A-B)
-print(A*B)
+namespace test1
+{
+    class MainApp
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+        }
+    }
+}
