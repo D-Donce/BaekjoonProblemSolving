@@ -1,7 +1,8 @@
 #include <iostream>
-
+using namespace std;
+    
 int main(void)
-{ 
-	std::cout << "2021-08-28";
-	return 0;
+{
+    cout << "고려대학교";
+    return 0;
 }
