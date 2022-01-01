@@ -3,9 +3,12 @@ using namespace std;
 
 int main(void)
 {
-	int a, b;
-	cin >> a >> b;
-	cout << a*b-a+1;
+
+	cout << "       _.-;;-._\n";
+	cout << "'-..-'|   ||   |\n";
+	cout << "'-..-'|_.-;;-._|\n";
+	cout << "'-..-'|   ||   |\n";
+	cout << "'-..-'|_.-''-._|";
 
 	return 0;
 }
